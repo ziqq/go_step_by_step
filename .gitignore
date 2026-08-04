@@ -1,0 +1,16 @@
+# Build artifacts
+bin/
+
+# Database files
+tbl/
+
+# Environment
+.env
+
+# Go
+*.test
+*.out
+vendor/
+
+# air hot-reload temp dir
+tmp/
