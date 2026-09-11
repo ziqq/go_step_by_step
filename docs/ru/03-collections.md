@@ -12,15 +12,19 @@
 
 Запускайте команды из корня репозитория:
 
-    go run ./lessons/03-collections
-    go test ./lessons/03-collections
+```sh
+go run ./lessons/03-collections
+go test ./lessons/03-collections
+```
 
 Ожидаемый вывод:
 
-    status count: 5
-    status sum: 1829
-    unique methods: [messages.send messages.load]
-    status frequencies: map[200:1 201:1 429:2 500:1]
+```text
+status count: 5
+status sum: 1829
+unique methods: [messages.send messages.load]
+status frequencies: map[200:1 201:1 429:2 500:1]
+```
 
 Порядок элементов карты не гарантирован. Показанный вывод — только один из возможных вариантов.
 
@@ -28,8 +32,10 @@
 
 У массива фиксированная длина, которая является частью его типа:
 
-    var limits [3]int
-    values := [3]int{10, 20, 30}
+```go
+var limits [3]int
+values := [3]int{10, 20, 30}
+```
 
 Типы [3]int и [4]int — разные типы. Массивы являются значениями: присваивание массива копирует все его элементы. Используйте массив, когда размер действительно фиксирован и является частью предметной области.
 
@@ -39,29 +45,39 @@
 
 Создать срез можно литералом:
 
-    statuses := []int{200, 404, 500}
+```go
+statuses := []int{200, 404, 500}
+```
 
 Длина — количество элементов. Ёмкость — сколько элементов помещается во внутреннем массиве до того, как Go выделит новый:
 
-    len(statuses)
-    cap(statuses)
+```go
+len(statuses)
+cap(statuses)
+```
 
 Для чтения и изменения элемента используется индекс:
 
-    statuses[0] = 201
-    first := statuses[0]
+```go
+statuses[0] = 201
+first := statuses[0]
+```
 
 Индексы начинаются с нуля. Чтение за пределами диапазона вызывает panic, поэтому индексы из внешнего запроса нужно проверять.
 
 У nil-среза длина и ёмкость равны нулю, и его безопасно перебирать:
 
-    var values []int
-    fmt.Println(len(values)) // 0
+```go
+var values []int
+fmt.Println(len(values)) // 0
+```
 
 append возвращает итоговый срез. Всегда присваивайте результат, потому что append может выделить новый внутренний массив:
 
-    values = append(values, 10)
-    values = append(values, 20, 30)
+```go
+values = append(values, 10)
+values = append(values, 20, 30)
+```
 
 Разница между nil-срезом и пустым срезом может быть важна при JSON-кодировании. Nil-срез обычно превращается в null, а ненулевой пустой срез — в []. Выбирайте представление, которое требует контракт API.
 
@@ -69,29 +85,37 @@ append возвращает итоговый срез. Всегда присва
 
 Форма range перебирает коллекцию:
 
-    for index, status := range statuses {
-        fmt.Println(index, status)
-    }
+```go
+for index, status := range statuses {
+    fmt.Println(index, status)
+}
+```
 
 Для среза или массива range возвращает индекс и копию элемента. Если индекс не нужен, используйте blank identifier:
 
-    for _, status := range statuses {
-        if status >= 500 {
-            // обработать ошибку сервера
-        }
+```go
+for _, status := range statuses {
+    if status >= 500 {
+        // обработать ошибку сервера
     }
+}
+```
 
 Значение является копией. Изменение status внутри цикла не изменит срез. Для изменения элементов используйте индекс:
 
-    for index := range statuses {
-        statuses[index]++
-    }
+```go
+for index := range statuses {
+    statuses[index]++
+}
+```
 
 Этим же синтаксисом можно перебирать карту, но порядок элементов карты намеренно не определён:
 
-    for method, count := range methodCounts {
-        fmt.Println(method, count)
-    }
+```go
+for method, count := range methodCounts {
+    fmt.Println(method, count)
+}
+```
 
 Никогда не делайте порядок ответа API или теста зависимым от порядка карты. Если нужен детерминированный вывод, сортируйте ключи; сортировку мы позже разберём со стандартной библиотекой.
 
@@ -99,22 +123,28 @@ append возвращает итоговый срез. Всегда присва
 
 Карта хранит пары ключ-значение:
 
-    counts := make(map[int]int)
-    counts[200]++
-    counts[500] = 2
+```go
+counts := make(map[int]int)
+counts[200]++
+counts[500] = 2
+```
 
 Нулевое значение карты — nil. Чтение отсутствующего ключа из nil-карты безопасно и возвращает нулевое значение типа, но запись в nil-карту вызывает panic. Перед записью инициализируйте карту через make или литерал.
 
 Используйте форму comma-ok, чтобы отличить отсутствующий ключ от сохранённого нулевого значения:
 
-    count, exists := counts[404]
-    if !exists {
-        count = 0
-    }
+```go
+count, exists := counts[404]
+if !exists {
+    count = 0
+}
+```
 
 Функция delete удаляет ключ. Удаление отсутствующего ключа безопасно:
 
-    delete(counts, 404)
+```go
+delete(counts, 404)
+```
 
 Карта в countStatuses использует полезное свойство нулевого значения. При первой встрече со статусом counts[status] сначала равно нулю, поэтому увеличение сразу создаёт значение один.
 
@@ -122,8 +152,10 @@ append возвращает итоговый срез. Всегда присва
 
 В Go нет встроенного типа set. Частое представление — карта со значениями пустого struct:
 
-    seen := make(map[string]struct{})
-    seen["messages.send"] = struct{}{}
+```go
+seen := make(map[string]struct{})
+seen["messages.send"] = struct{}{}
+```
 
 Пустой struct не занимает места для значения. Карта в uniqueMethods запоминает уже добавленные методы, а срез сохраняет порядок их первого появления.
 
@@ -146,14 +178,18 @@ append возвращает итоговый срез. Всегда присва
 
 Запустите тесты подробно:
 
-    go test -v ./lessons/03-collections
+```sh
+go test -v ./lessons/03-collections
+```
 
 Перед коммитом запускайте все проверки репозитория:
 
-    go fmt ./...
-    go test ./...
-    go test -race ./...
-    go vet ./...
+```sh
+go fmt ./...
+go test ./...
+go test -race ./...
+go vet ./...
+```
 
 ## Типичные ошибки
 

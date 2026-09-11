@@ -12,33 +12,41 @@ The examples use HTTP status codes because backend code constantly decides wheth
 
 Run these commands from the repository root:
 
-    go run ./lessons/02-control-flow
-    go test ./lessons/02-control-flow
+```sh
+go run ./lessons/02-control-flow
+go test ./lessons/02-control-flow
+```
 
 Expected output:
 
-    status 503: retry
-    retry delay for attempt 3: 4s
-    sum of first 5 numbers: 15
+```text
+status 503: retry
+retry delay for attempt 3: 4s
+sum of first 5 numbers: 15
+```
 
 ## Operators
 
 Arithmetic operators calculate values:
 
-    total := 7 + 3
-    difference := 7 - 3
-    product := 7 * 3
-    quotient := 7 / 3
-    remainder := 7 % 3
+```go
+total := 7 + 3
+difference := 7 - 3
+product := 7 * 3
+quotient := 7 / 3
+remainder := 7 % 3
+```
 
 When both operands are integers, division performs integer division and 7 / 3 is 2. The remainder operator returns 1 for 7 % 3.
 
 Comparison operators return a bool:
 
-    status >= 200
-    status < 300
-    status == 429
-    status != 404
+```go
+status >= 200
+status < 300
+status == 429
+status != 404
+```
 
 Logical operators combine boolean expressions:
 
@@ -50,7 +58,9 @@ Logical operators combine boolean expressions:
 
 In isSuccessStatus, both boundaries are required. A response with status 200 is successful, but 300 is not:
 
-    return status >= 200 && status < 300
+```go
+return status >= 200 && status < 300
+```
 
 Go evaluates && and || from left to right and stops as soon as the result is known. This is called short-circuit evaluation. Keep the order in mind when the second expression depends on the first one.
 
@@ -58,29 +68,35 @@ Go evaluates && and || from left to right and stops as soon as the result is kno
 
 An if executes its body only when the condition is true:
 
-    if attempt <= 0 {
-        return 0
-    }
+```go
+if attempt <= 0 {
+    return 0
+}
+```
 
 The example returns early for invalid attempts. This keeps the main calculation free of a nested else block.
 
 The optional initializer can declare a value whose scope lasts until the end of that if statement:
 
-    if success := isSuccessStatus(status); success {
-        return "success"
-    }
+```go
+if success := isSuccessStatus(status); success {
+    return "success"
+}
+```
 
 The variable success exists only inside this if. It cannot be used after the closing brace. Small scopes make it harder to accidentally reuse a temporary value in an unrelated branch.
 
 Use else if when branches are mutually exclusive:
 
-    if status >= 500 {
-        return "server error"
-    } else if status >= 400 {
-        return "client error"
-    } else {
-        return "other"
-    }
+```go
+if status >= 500 {
+    return "server error"
+} else if status >= 400 {
+    return "client error"
+} else {
+    return "other"
+}
+```
 
 Do not add else after an unconditional return unless it makes a short example easier to read. In production code, guard clauses are usually clearer.
 
@@ -90,9 +106,11 @@ Go has one loop keyword: for.
 
 The three-part form looks similar to a traditional for loop:
 
-    for i := 1; i < attempt; i++ {
-        delay *= 2
-    }
+```go
+for i := 1; i < attempt; i++ {
+    delay *= 2
+}
+```
 
 It has an initializer (i := 1), a condition (i < attempt), and a post statement (i++). The variable i is scoped to the loop.
 
@@ -107,9 +125,11 @@ The loop in retryDelaySeconds doubles the delay once for every retry after the f
 
 Go also supports a condition-only loop:
 
-    for condition {
-        // repeated work
-    }
+```go
+for condition {
+    // repeated work
+}
+```
 
 Use break to stop a loop and continue to skip the rest of the current iteration. We will use these with arrays, slices, and maps in the next lesson.
 
@@ -117,15 +137,17 @@ Use break to stop a loop and continue to skip the rest of the current iteration.
 
 Scope is the part of the program where a name can be used. A function parameter is available inside its function. A variable declared inside an if or for is available only in that block.
 
-    func example(value int) int {
-        if value > 0 {
-            result := value * 2
-            return result
-        }
-
-        // result does not exist here.
-        return 0
+```go
+func example(value int) int {
+    if value > 0 {
+        result := value * 2
+        return result
     }
+
+    // result does not exist here.
+    return 0
+}
+```
 
 Be careful with :=: it declares a new variable when at least one name on the left is new in the current scope. Accidentally creating a new variable instead of updating an outer one is called shadowing. The compiler catches some unused variables, but not every shadowing mistake.
 
@@ -147,14 +169,18 @@ The tests use table-driven cases. Each case gives an input and an expected resul
 
 Run the tests verbosely:
 
-    go test -v ./lessons/02-control-flow
+```sh
+go test -v ./lessons/02-control-flow
+```
 
 Run all repository checks before committing:
 
-    go fmt ./...
-    go test ./...
-    go test -race ./...
-    go vet ./...
+```sh
+go fmt ./...
+go test ./...
+go test -race ./...
+go vet ./...
+```
 
 ## Common mistakes
 

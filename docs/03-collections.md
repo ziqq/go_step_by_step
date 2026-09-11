@@ -12,15 +12,19 @@ Collections are everywhere in a backend: a page of messages is a slice, a set of
 
 Run these commands from the repository root:
 
-    go run ./lessons/03-collections
-    go test ./lessons/03-collections
+```sh
+go run ./lessons/03-collections
+go test ./lessons/03-collections
+```
 
 Expected output:
 
-    status count: 5
-    status sum: 1829
-    unique methods: [messages.send messages.load]
-    status frequencies: map[200:1 201:1 429:2 500:1]
+```text
+status count: 5
+status sum: 1829
+unique methods: [messages.send messages.load]
+status frequencies: map[200:1 201:1 429:2 500:1]
+```
 
 The order of map entries is not guaranteed. The example output shows one possible order.
 
@@ -28,8 +32,10 @@ The order of map entries is not guaranteed. The example output shows one possibl
 
 An array has a fixed length that is part of its type:
 
-    var limits [3]int
-    values := [3]int{10, 20, 30}
+```go
+var limits [3]int
+values := [3]int{10, 20, 30}
+```
 
 The types [3]int and [4]int are different types. Arrays are values: assigning an array copies all of its elements. Use arrays when the size is genuinely fixed and part of the domain.
 
@@ -39,29 +45,39 @@ Most application code uses slices instead. A slice is a small descriptor pointin
 
 Create a slice with a literal:
 
-    statuses := []int{200, 404, 500}
+```go
+statuses := []int{200, 404, 500}
+```
 
 The length is the number of elements. The capacity is how many elements can fit in the current backing array before Go allocates another one:
 
-    len(statuses)
-    cap(statuses)
+```go
+len(statuses)
+cap(statuses)
+```
 
 Use an index to read or update an element:
 
-    statuses[0] = 201
-    first := statuses[0]
+```go
+statuses[0] = 201
+first := statuses[0]
+```
 
 Indexes start at zero. Reading outside the range causes a panic, so validate indexes when they come from an external request.
 
 A nil slice has length and capacity zero and can be ranged over safely:
 
-    var values []int
-    fmt.Println(len(values)) // 0
+```go
+var values []int
+fmt.Println(len(values)) // 0
+```
 
 append returns the resulting slice. Always assign the result because append may allocate a new backing array:
 
-    values = append(values, 10)
-    values = append(values, 20, 30)
+```go
+values = append(values, 10)
+values = append(values, 20, 30)
+```
 
 The distinction between nil and empty slices can matter when encoding JSON. A nil slice commonly encodes as null, while a non-nil empty slice commonly encodes as []. Choose the representation required by the API contract.
 
@@ -69,29 +85,37 @@ The distinction between nil and empty slices can matter when encoding JSON. A ni
 
 The range form iterates over a collection:
 
-    for index, status := range statuses {
-        fmt.Println(index, status)
-    }
+```go
+for index, status := range statuses {
+    fmt.Println(index, status)
+}
+```
 
 For a slice or array, range provides the index and a copy of the element. Use the blank identifier when the index is not needed:
 
-    for _, status := range statuses {
-        if status >= 500 {
-            // handle a server error
-        }
+```go
+for _, status := range statuses {
+    if status >= 500 {
+        // handle a server error
     }
+}
+```
 
 The value is a copy. Changing status inside the loop does not update the slice. To update elements, use the index:
 
-    for index := range statuses {
-        statuses[index]++
-    }
+```go
+for index := range statuses {
+    statuses[index]++
+}
+```
 
 The same syntax can iterate over a map, but map iteration order is deliberately unspecified:
 
-    for method, count := range methodCounts {
-        fmt.Println(method, count)
-    }
+```go
+for method, count := range methodCounts {
+    fmt.Println(method, count)
+}
+```
 
 Never make API output or tests depend on the order of map iteration. Sort keys when deterministic output is required; sorting will be covered later with the standard library.
 
@@ -99,22 +123,28 @@ Never make API output or tests depend on the order of map iteration. Sort keys w
 
 A map stores key-value pairs:
 
-    counts := make(map[int]int)
-    counts[200]++
-    counts[500] = 2
+```go
+counts := make(map[int]int)
+counts[200]++
+counts[500] = 2
+```
 
 The zero value of a map is nil. Reading a missing key from a nil map is safe and returns the value type's zero value, but assigning to a nil map panics. Initialize a map with make or a literal before writing to it.
 
 Use the comma-ok form to distinguish a missing key from a stored zero value:
 
-    count, exists := counts[404]
-    if !exists {
-        count = 0
-    }
+```go
+count, exists := counts[404]
+if !exists {
+    count = 0
+}
+```
 
 The delete function removes a key. Deleting a missing key is safe:
 
-    delete(counts, 404)
+```go
+delete(counts, 404)
+```
 
 The map in countStatuses uses a useful zero-value property. When the first status is seen, counts[status] is initially zero, so incrementing it creates the value one.
 
@@ -122,8 +152,10 @@ The map in countStatuses uses a useful zero-value property. When the first statu
 
 Go has no built-in set type. A map with empty struct values is a common representation:
 
-    seen := make(map[string]struct{})
-    seen["messages.send"] = struct{}{}
+```go
+seen := make(map[string]struct{})
+seen["messages.send"] = struct{}{}
+```
 
 The empty struct occupies no storage for its value. The map in uniqueMethods remembers which command methods have already been added while the slice preserves their first-seen order.
 
@@ -146,14 +178,18 @@ The tests cover nil and empty slices, negative values, duplicate entries, first-
 
 Run the tests verbosely:
 
-    go test -v ./lessons/03-collections
+```sh
+go test -v ./lessons/03-collections
+```
 
 Run all repository checks before committing:
 
-    go fmt ./...
-    go test ./...
-    go test -race ./...
-    go vet ./...
+```sh
+go fmt ./...
+go test ./...
+go test -race ./...
+go vet ./...
+```
 
 ## Common mistakes
 
