@@ -98,3 +98,40 @@ func TestSumFirst(t *testing.T) {
 		}
 	}
 }
+
+func TestIsValidPort(t *testing.T) {
+	tests := []struct {
+		port int
+		want bool
+	}{
+		{port: 0, want: false},
+		{port: 32, want: true},
+		{port: 65535, want: true},
+		{port: 65536, want: false},
+	}
+
+	for _, test := range tests {
+		if got := isValidPort(test.port); got != test.want {
+			t.Fatalf("isValidPort(%d) = %t, want %t", test.port, got, test.want)
+		}
+	}
+}
+
+func TestClamp(t *testing.T) {
+	tests := []struct {
+		value   int
+		minumum int
+		maximum int
+		want    int
+	}{
+		{value: 329, minumum: 100, maximum: 500, want: 329},
+		{value: 90, minumum: 100, maximum: 500, want: 100},
+		{value: 500, minumum: 100, maximum: 500, want: 500},
+	}
+
+	for _, test := range tests {
+		if got := clamp(test.value, test.minumum, test.maximum); got != test.want {
+			t.Fatalf("clamp(%d) = %d, want %d", test.value, got, test.want)
+		}
+	}
+}
