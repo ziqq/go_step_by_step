@@ -69,7 +69,7 @@ func isValidPort(port int) bool {
 // Зафиксируйте в документации предположение minimum <= maximum. (Это как?)
 func clamp(value, minimum, maximum int) int {
 	// if (minimum > maximum)
-	if value <= maximum && value >= minimum  {
+	if value <= maximum && value >= minimum {
 		return value
 	} else if value < minimum {
 		return minimum
@@ -83,7 +83,7 @@ func clamp(value, minimum, maximum int) int {
 // Добавьте isEven(value int) bool, используя оператор остатка.
 // В тестах добавьте отрицательное чётное число.
 func isEven(value int) bool {
-	return value % 2 == 0
+	return value%2 == 0
 }
 
 // 4.
@@ -97,7 +97,6 @@ func coundDown(start int) []int {
 	}
 	return result
 }
-
 
 func main() {
 	status := 503
@@ -116,7 +115,6 @@ func main() {
 
 	fmt.Printf("\nIs even: %t ", isEven(2))
 	fmt.Printf("\nIs not even: %t ", isEven(3))
-
 
 	fmt.Printf("\nCound down: %v ", coundDown(8))
 }

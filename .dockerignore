@@ -1,0 +1,9 @@
+.git
+.github
+.env
+.env.*
+bin
+tmp
+vendor
+**/*.test
+**/*.out
