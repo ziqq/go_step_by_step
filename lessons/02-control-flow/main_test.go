@@ -120,17 +120,17 @@ func TestIsValidPort(t *testing.T) {
 func TestClamp(t *testing.T) {
 	tests := []struct {
 		value   int
-		minumum int
+		minimum int
 		maximum int
 		want    int
 	}{
-		{value: 329, minumum: 100, maximum: 500, want: 329},
-		{value: 90, minumum: 100, maximum: 500, want: 100},
-		{value: 500, minumum: 100, maximum: 500, want: 500},
+		{value: 329, minimum: 100, maximum: 500, want: 329},
+		{value: 90, minimum: 100, maximum: 500, want: 100},
+		{value: 500, minimum: 100, maximum: 500, want: 500},
 	}
 
 	for _, test := range tests {
-		if got := clamp(test.value, test.minumum, test.maximum); got != test.want {
+		if got := clamp(test.value, test.minimum, test.maximum); got != test.want {
 			t.Fatalf("clamp(%d) = %d, want %d", test.value, got, test.want)
 		}
 	}

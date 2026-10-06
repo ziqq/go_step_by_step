@@ -11,8 +11,8 @@ func isRetryableStatus(status int) bool {
 }
 
 // 5.
-// success виден только в нутри функции requestDecision
-// В не обязательном иницилизаторе область видимости
+// success виден только внутри функции requestDecision
+// В необязательном инициализаторе область видимости
 // переменной success заканчивается вместе с блоком if
 func requestDecision(status int) string {
 	if success := isSuccessStatus(status); success {
@@ -90,7 +90,7 @@ func isEven(value int) bool {
 // Добавьте countDown(start int) []int, возвращающую значения от start до 0.
 // Не записывайте каждое значение вручную — используйте цикл.
 // Тип возвращаемого среза является предварительным знаком следующего урока.
-func coundDown(start int) []int {
+func countDown(start int) []int {
 	var result []int
 	for i := start; i >= 0; i-- {
 		result = append(result, i)
@@ -116,5 +116,5 @@ func main() {
 	fmt.Printf("\nIs even: %t ", isEven(2))
 	fmt.Printf("\nIs not even: %t ", isEven(3))
 
-	fmt.Printf("\nCound down: %v ", coundDown(8))
+	fmt.Printf("\nCount down: %v ", countDown(8))
 }
