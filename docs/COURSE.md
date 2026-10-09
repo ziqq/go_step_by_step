@@ -56,8 +56,9 @@ The course favors the standard library, simple packages, useful zero values, cle
 17. Performance: benchmarks, allocations, profiles, and load testing.
 18. Reliability: timeouts, retries, idempotency, queues, and backpressure.
 19. System design: API contracts, caching, background workers, and evolution of a service.
+20. Capstone I: compose an HTTP message-writing slice from a handler, application service, and store boundary.
 
-**Capstone:** a production-ready service with PostgreSQL, migrations, API tests, observability, Docker, and CI.
+**Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
 ## Project layout as complexity grows
 

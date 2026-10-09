@@ -34,3 +34,6 @@ Go step by step: start here
 15. [Deployable service](lessons/15-deployable-service)
 16. [Observability](lessons/16-observability)
 17. [Performance](lessons/17-performance)
+18. [Reliability](lessons/18-reliability)
+19. [System design](lessons/19-system-design)
+20. [Capstone: service composition](lessons/20-capstone)
