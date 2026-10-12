@@ -37,3 +37,4 @@ Go step by step: start here
 18. [Reliability](lessons/18-reliability)
 19. [System design](lessons/19-system-design)
 20. [Capstone: service composition](lessons/20-capstone)
+21. [Capstone: conversation authorization](lessons/21-capstone-authz)
