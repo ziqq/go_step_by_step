@@ -38,3 +38,4 @@ Go step by step: start here
 19. [System design](lessons/19-system-design)
 20. [Capstone: service composition](lessons/20-capstone)
 21. [Capstone: conversation authorization](lessons/21-capstone-authz)
+22. [Capstone: paginated message history](lessons/22-capstone-history)

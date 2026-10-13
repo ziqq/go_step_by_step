@@ -58,6 +58,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 19. System design: API contracts, caching, background workers, and evolution of a service.
 20. Capstone I: compose an HTTP message-writing slice from a handler, application service, and store boundary.
 21. Capstone II: authorize a message write using a verified principal and conversation membership.
+22. Capstone III: return conversation history with bounded keyset pagination and per-request authorization.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
