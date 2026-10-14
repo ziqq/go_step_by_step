@@ -39,3 +39,4 @@ Go step by step: start here
 20. [Capstone: service composition](lessons/20-capstone)
 21. [Capstone: conversation authorization](lessons/21-capstone-authz)
 22. [Capstone: paginated message history](lessons/22-capstone-history)
+23. [Capstone: PostgreSQL history store](lessons/23-postgres-history)
