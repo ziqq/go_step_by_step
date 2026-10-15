@@ -60,6 +60,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 21. Capstone II: authorize a message write using a verified principal and conversation membership.
 22. Capstone III: return conversation history with bounded keyset pagination and per-request authorization.
 23. Capstone IV: persist scoped history pages in PostgreSQL using a read-only snapshot transaction.
+24. Capstone V: test the history HTTP-to-storage boundary, trusted identity, public errors, and context propagation.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

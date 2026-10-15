@@ -40,3 +40,4 @@ Go step by step: start here
 21. [Capstone: conversation authorization](lessons/21-capstone-authz)
 22. [Capstone: paginated message history](lessons/22-capstone-history)
 23. [Capstone: PostgreSQL history store](lessons/23-postgres-history)
+24. [Capstone: history HTTP contract tests](lessons/24-history-api-tests)
