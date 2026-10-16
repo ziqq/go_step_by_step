@@ -41,3 +41,4 @@ Go step by step: start here
 22. [Capstone: paginated message history](lessons/22-capstone-history)
 23. [Capstone: PostgreSQL history store](lessons/23-postgres-history)
 24. [Capstone: history HTTP contract tests](lessons/24-history-api-tests)
+25. [Capstone: private history access logs](lessons/25-history-access-logs)
