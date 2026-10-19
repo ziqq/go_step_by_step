@@ -42,3 +42,4 @@ Go step by step: start here
 23. [Capstone: PostgreSQL history store](lessons/23-postgres-history)
 24. [Capstone: history HTTP contract tests](lessons/24-history-api-tests)
 25. [Capstone: private history access logs](lessons/25-history-access-logs)
+26. [Capstone: build metadata and packaging](lessons/26-build-provenance)
