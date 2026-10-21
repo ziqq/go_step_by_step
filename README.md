@@ -43,3 +43,4 @@ Go step by step: start here
 24. [Capstone: history HTTP contract tests](lessons/24-history-api-tests)
 25. [Capstone: private history access logs](lessons/25-history-access-logs)
 26. [Capstone: build metadata and packaging](lessons/26-build-provenance)
+27. [Capstone: transactional message outbox](lessons/27-transactional-outbox)
