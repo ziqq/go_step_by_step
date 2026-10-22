@@ -64,6 +64,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 25. Capstone VI: instrument buffered history HTTP requests with allowlisted structured access logs and privacy tests.
 26. Capstone VII: identify packaged binaries with explicit build metadata, a pinned non-root container, and a verified CI artifact assignment.
 27. Capstone VIII: atomically persist a message and outbox event, test rollback and commit failures in PostgreSQL, and design an idempotent local consumer.
+28. Capstone IX: prevent lost message edits with a scoped version-checked UPDATE and test concurrent writers before adding an HTTP adapter.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

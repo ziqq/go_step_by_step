@@ -44,3 +44,4 @@ Go step by step: start here
 25. [Capstone: private history access logs](lessons/25-history-access-logs)
 26. [Capstone: build metadata and packaging](lessons/26-build-provenance)
 27. [Capstone: transactional message outbox](lessons/27-transactional-outbox)
+28. [Capstone: optimistic message edits](lessons/28-optimistic-edits)
