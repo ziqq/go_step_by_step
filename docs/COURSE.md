@@ -65,6 +65,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 26. Capstone VII: identify packaged binaries with explicit build metadata, a pinned non-root container, and a verified CI artifact assignment.
 27. Capstone VIII: atomically persist a message and outbox event, test rollback and commit failures in PostgreSQL, and design an idempotent local consumer.
 28. Capstone IX: prevent lost message edits with a scoped version-checked UPDATE and test concurrent writers before adding an HTTP adapter.
+29. Capstone X: validate immutable migration checksums and ordered history, serialize cooperating runners, and test atomic schema upgrades before adding soft delete.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
