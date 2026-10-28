@@ -67,6 +67,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 28. Capstone IX: prevent lost message edits with a scoped version-checked UPDATE and test concurrent writers before adding an HTTP adapter.
 29. Capstone X: validate immutable migration checksums and ordered history, serialize cooperating runners, and test atomic schema upgrades before adding soft delete.
 30. Capstone XI: bound simultaneous HTTP work with fail-fast admission, preserve cancellation and handler lifetime, and design a shared route budget with a health-check bypass.
+31. Capstone XII: bound outbound HTTP duration and response bytes, reject redirects, close bodies on every response path, and validate a dependency JSON contract as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

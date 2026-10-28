@@ -47,3 +47,4 @@ Go step by step: start here
 28. [Capstone: optimistic message edits](lessons/28-optimistic-edits)
 29. [Capstone: migration integrity](lessons/29-migration-integrity)
 30. [Capstone: HTTP concurrency admission](lessons/30-http-admission)
+31. [Capstone: outbound HTTP budgets](lessons/31-outbound-http)
