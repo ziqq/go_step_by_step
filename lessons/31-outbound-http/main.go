@@ -38,6 +38,12 @@ func (c *snapshotClient) fetch(ctx context.Context, endpoint string) ([]byte, er
 	if err := ctx.Err(); err != nil {
 		return nil, err
 	}
+	// Keep the client budget in the request context through response-body reads.
+	if c.http.Timeout > 0 {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, c.http.Timeout)
+		defer cancel()
+	}
 	request, err := http.NewRequestWithContext(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
 		return nil, fmt.Errorf("create snapshot request: %w", err)
