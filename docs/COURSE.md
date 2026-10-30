@@ -69,6 +69,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 30. Capstone XI: bound simultaneous HTTP work with fail-fast admission, preserve cancellation and handler lifetime, and design a shared route budget with a health-check bypass.
 31. Capstone XII: bound outbound HTTP duration and response bytes, reject redirects, close bodies on every response path, and validate a dependency JSON contract as an exercise.
 32. Capstone XIII: cap retry attempts and backoff under one cancelable deadline, preserve terminal errors, and add a controllable full-jitter source as an exercise.
+33. Capstone XIV: close background-task admission before cancellation and joining, account for every accepted callback, and add bounded shutdown waiting as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
