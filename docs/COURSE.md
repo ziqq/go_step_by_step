@@ -70,6 +70,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 31. Capstone XII: bound outbound HTTP duration and response bytes, reject redirects, close bodies on every response path, and validate a dependency JSON contract as an exercise.
 32. Capstone XIII: cap retry attempts and backoff under one cancelable deadline, preserve terminal errors, and add a controllable full-jitter source as an exercise.
 33. Capstone XIV: close background-task admission before cancellation and joining, account for every accepted callback, and add bounded shutdown waiting as an exercise.
+34. Capstone XV: bound waiting jobs behind one worker, reject overload without waiting for space, drain accepted jobs on close, and add all-or-nothing batch admission as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
