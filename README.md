@@ -51,3 +51,4 @@ Go step by step: start here
 32. [Capstone: bounded retry budgets](lessons/32-retry-budgets)
 33. [Capstone: worker lifecycle ownership](lessons/33-worker-lifecycle)
 34. [Capstone: bounded worker queue](lessons/34-bounded-queue)
+35. [Capstone: bounded TTL cache](lessons/35-ttl-cache)
