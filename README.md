@@ -52,3 +52,4 @@ Go step by step: start here
 33. [Capstone: worker lifecycle ownership](lessons/33-worker-lifecycle)
 34. [Capstone: bounded worker queue](lessons/34-bounded-queue)
 35. [Capstone: bounded TTL cache](lessons/35-ttl-cache)
+36. [Capstone: scoped load coalescing](lessons/36-load-coalescing)

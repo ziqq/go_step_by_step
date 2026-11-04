@@ -72,6 +72,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 33. Capstone XIV: close background-task admission before cancellation and joining, account for every accepted callback, and add bounded shutdown waiting as an exercise.
 34. Capstone XV: bound waiting jobs behind one worker, reject overload without waiting for space, drain accepted jobs on close, and add all-or-nothing batch admission as an exercise.
 35. Capstone XVI: bound scoped TTL snapshots, own input/output bytes, test exact expiry and capacity, then invalidate one conversation across viewers as an exercise.
+36. Capstone XVII: coalesce active reads by scope, bound distinct loaders, preserve leader ownership and follower cancellation, then close admission and join loaders as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
