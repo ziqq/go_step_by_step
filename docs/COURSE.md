@@ -73,6 +73,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 34. Capstone XV: bound waiting jobs behind one worker, reject overload without waiting for space, drain accepted jobs on close, and add all-or-nothing batch admission as an exercise.
 35. Capstone XVI: bound scoped TTL snapshots, own input/output bytes, test exact expiry and capacity, then invalidate one conversation across viewers as an exercise.
 36. Capstone XVII: coalesce active reads by scope, bound distinct loaders, preserve leader ownership and follower cancellation, then close admission and join loaders as an exercise.
+37. Capstone XVIII: bound per-principal fixed rate windows and retained keys, distinguish quota from state capacity, then add a trusted-identity HTTP adapter with safe Retry-After as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

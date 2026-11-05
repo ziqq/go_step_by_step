@@ -53,3 +53,4 @@ Go step by step: start here
 34. [Capstone: bounded worker queue](lessons/34-bounded-queue)
 35. [Capstone: bounded TTL cache](lessons/35-ttl-cache)
 36. [Capstone: scoped load coalescing](lessons/36-load-coalescing)
+37. [Capstone: bounded rate windows](lessons/37-rate-windows)
