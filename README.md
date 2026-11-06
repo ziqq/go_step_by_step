@@ -54,3 +54,4 @@ Go step by step: start here
 35. [Capstone: bounded TTL cache](lessons/35-ttl-cache)
 36. [Capstone: scoped load coalescing](lessons/36-load-coalescing)
 37. [Capstone: bounded rate windows](lessons/37-rate-windows)
+38. [Capstone: bounded operation metrics](lessons/38-bounded-metrics)
