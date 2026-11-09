@@ -55,3 +55,4 @@ Go step by step: start here
 36. [Capstone: scoped load coalescing](lessons/36-load-coalescing)
 37. [Capstone: bounded rate windows](lessons/37-rate-windows)
 38. [Capstone: bounded operation metrics](lessons/38-bounded-metrics)
+39. [Capstone: bounded readiness probes](lessons/39-readiness)
