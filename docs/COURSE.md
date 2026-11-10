@@ -76,6 +76,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 37. Capstone XVIII: bound per-principal fixed rate windows and retained keys, distinguish quota from state capacity, then add a trusted-identity HTTP adapter with safe Retry-After as an exercise.
 38. Capstone XIX: bound metric labels, export coherent cumulative duration histograms outside the observation lock, then add a diagnostics-only HTTP adapter as an exercise.
 39. Capstone XX: separate liveness from readiness, bound dependency probes during load and drain, then add a shared budget for several checks.
+40. Capstone XXI: drain HTTP and join workers under one deadline before closing a shared resource, then add reverse-order cleanup as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

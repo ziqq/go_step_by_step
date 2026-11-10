@@ -56,3 +56,4 @@ Go step by step: start here
 37. [Capstone: bounded rate windows](lessons/37-rate-windows)
 38. [Capstone: bounded operation metrics](lessons/38-bounded-metrics)
 39. [Capstone: bounded readiness probes](lessons/39-readiness)
+40. [Capstone: shutdown order and shared resources](lessons/40-shutdown-order)
