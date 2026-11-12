@@ -78,6 +78,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 39. Capstone XX: separate liveness from readiness, bound dependency probes during load and drain, then add a shared budget for several checks.
 40. Capstone XXI: drain HTTP and join workers under one deadline before closing a shared resource, then add reverse-order cleanup as an exercise.
 41. Capstone XXII: bound long-lived sessions, close admission, and wait for session owners to finish, then add context-bounded waiting as an exercise.
+42. Capstone XXIII: fan out ephemeral events through bounded per-session queues, coordinate unsubscribe with publish, and report delivery attempts as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

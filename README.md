@@ -58,3 +58,4 @@ Go step by step: start here
 39. [Capstone: bounded readiness probes](lessons/39-readiness)
 40. [Capstone: shutdown order and shared resources](lessons/40-shutdown-order)
 41. [Capstone: long-lived session admission and drain](lessons/41-session-drain)
+42. [Capstone: bounded fan-out for ephemeral chat events](lessons/42-ephemeral-fanout)
