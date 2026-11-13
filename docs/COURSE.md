@@ -79,6 +79,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 40. Capstone XXI: drain HTTP and join workers under one deadline before closing a shared resource, then add reverse-order cleanup as an exercise.
 41. Capstone XXII: bound long-lived sessions, close admission, and wait for session owners to finish, then add context-bounded waiting as an exercise.
 42. Capstone XXIII: fan out ephemeral events through bounded per-session queues, coordinate unsubscribe with publish, and report delivery attempts as an exercise.
+43. Capstone XXIV: replay scoped durable events after a cursor, preserve accepted progress on failure, and bound the page count as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
