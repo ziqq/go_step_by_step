@@ -60,3 +60,4 @@ Go step by step: start here
 41. [Capstone: long-lived session admission and drain](lessons/41-session-drain)
 42. [Capstone: bounded fan-out for ephemeral chat events](lessons/42-ephemeral-fanout)
 43. [Capstone: replay durable chat events](lessons/43-event-replay)
+44. [Capstone: wake signals for durable events](lessons/44-event-wake)
