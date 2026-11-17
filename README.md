@@ -61,3 +61,4 @@ Go step by step: start here
 42. [Capstone: bounded fan-out for ephemeral chat events](lessons/42-ephemeral-fanout)
 43. [Capstone: replay durable chat events](lessons/43-event-replay)
 44. [Capstone: wake signals for durable events](lessons/44-event-wake)
+45. [Capstone: one session writer with write deadlines](lessons/45-session-writer)

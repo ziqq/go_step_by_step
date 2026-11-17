@@ -81,6 +81,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 42. Capstone XXIII: fan out ephemeral events through bounded per-session queues, coordinate unsubscribe with publish, and report delivery attempts as an exercise.
 43. Capstone XXIV: replay scoped durable events after a cursor, preserve accepted progress on failure, and bound the page count as an exercise.
 44. Capstone XXV: refresh durable events on wake signals and periodic ticks, then coalesce pending signals as an exercise.
+45. Capstone XXVI: serialize outbound session frames, bound each write, and give a pending ping priority as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
