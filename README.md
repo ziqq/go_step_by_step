@@ -62,3 +62,4 @@ Go step by step: start here
 43. [Capstone: replay durable chat events](lessons/43-event-replay)
 44. [Capstone: wake signals for durable events](lessons/44-event-wake)
 45. [Capstone: one session writer with write deadlines](lessons/45-session-writer)
+46. [Capstone: renew a session read deadline on pong](lessons/46-session-read-deadline)
