@@ -83,6 +83,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 44. Capstone XXV: refresh durable events on wake signals and periodic ticks, then coalesce pending signals as an exercise.
 45. Capstone XXVI: serialize outbound session frames, bound each write, and give a pending ping priority as an exercise.
 46. Capstone XXVII: renew the reader deadline on pong, then cap the session lifetime as an exercise.
+47. Capstone XXVIII: reject oversized frames before allocation, distinguish truncated input, then bound total session payload bytes as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
