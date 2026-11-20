@@ -64,3 +64,4 @@ Go step by step: start here
 45. [Capstone: one session writer with write deadlines](lessons/45-session-writer)
 46. [Capstone: renew a session read deadline on pong](lessons/46-session-read-deadline)
 47. [Capstone: bound frame bytes before allocation](lessons/47-bounded-frames)
+48. [Capstone: decode one session command before dispatch](lessons/48-session-command)

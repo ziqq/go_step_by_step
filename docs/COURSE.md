@@ -84,6 +84,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 45. Capstone XXVI: serialize outbound session frames, bound each write, and give a pending ping priority as an exercise.
 46. Capstone XXVII: renew the reader deadline on pong, then cap the session lifetime as an exercise.
 47. Capstone XXVIII: reject oversized frames before allocation, distinguish truncated input, then bound total session payload bytes as an exercise.
+48. Capstone XXIX: decode and validate one JSON session command, reject trailing values, then require unique canonical keys as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 
