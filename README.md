@@ -65,3 +65,4 @@ Go step by step: start here
 46. [Capstone: renew a session read deadline on pong](lessons/46-session-read-deadline)
 47. [Capstone: bound frame bytes before allocation](lessons/47-bounded-frames)
 48. [Capstone: decode one session command before dispatch](lessons/48-session-command)
+49. [Capstone: check browser Origin before upgrade](lessons/49-browser-origin)
