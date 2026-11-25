@@ -67,3 +67,4 @@ Go step by step: start here
 48. [Capstone: decode one session command before dispatch](lessons/48-session-command)
 49. [Capstone: check browser Origin before upgrade](lessons/49-browser-origin)
 50. [Capstone: negotiate a session subprotocol](lessons/50-session-subprotocol)
+51. [Capstone: safe replies to session commands](lessons/51-session-replies)
