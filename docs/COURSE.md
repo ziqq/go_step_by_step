@@ -88,6 +88,7 @@ The course favors the standard library, simple packages, useful zero values, cle
 49. Capstone XXX: reject untrusted browser origins before upgrade, then compile and own a validated configured allowlist as an exercise.
 50. Capstone XXXI: validate complete subprotocol offers and select a supported token, then validate the server selection on the client as an exercise.
 51. Capstone XXXII: map command outcomes to safe public reply codes, then validate correlation and context before execution as an exercise.
+52. Capstone XXXIII: reconcile repeated sends with an immutable scoped PostgreSQL receipt, reject changed input, then commit one outbox event atomically as an exercise.
 
 **Capstone:** complete the vertical slice with PostgreSQL, migrations, API tests, observability, Docker, and CI.
 

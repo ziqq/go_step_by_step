@@ -68,3 +68,4 @@ Go step by step: start here
 49. [Capstone: check browser Origin before upgrade](lessons/49-browser-origin)
 50. [Capstone: negotiate a session subprotocol](lessons/50-session-subprotocol)
 51. [Capstone: safe replies to session commands](lessons/51-session-replies)
+52. [Capstone: durable command idempotency](lessons/52-command-idempotency)
