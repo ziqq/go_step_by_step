@@ -69,3 +69,4 @@ Go step by step: start here
 50. [Capstone: negotiate a session subprotocol](lessons/50-session-subprotocol)
 51. [Capstone: safe replies to session commands](lessons/51-session-replies)
 52. [Capstone: durable command idempotency](lessons/52-command-idempotency)
+53. [Capstone: keep membership valid through commit](lessons/53-membership-lock)
